@@ -1,0 +1,24 @@
+.dialog {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.dialog form {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog label {
+  margin-top: 10px;
+}
+
+.dialog input {
+  margin-bottom: 10px;
+}
+
+.dialog menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}

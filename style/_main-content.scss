@@ -1,0 +1,48 @@
+.main {
+  &__content {
+    padding: 54px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 31px;
+    color: #000;
+  }
+
+  &__input-task {
+    margin-top: 50px;
+    border-radius: 8px;
+    border: 1px solid #f3f3f3;
+    width: 60vh;
+    height: 47px;
+    background-color: #f3f3f3;
+  }
+
+  &__task-add {
+    width: 30px; /* Увеличиваем размер для большей привлекательности */
+    height: 30px;
+    border: none; /* Убираем стандартную границу */
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e9e9f0 0%, #60628d 100%); /* Градиент фона */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+    color: white;
+    font-size: 24px; /* Увеличиваем размер текста */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Плавный переход для анимаций */
+
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        $accent 0%,
+        #8d3535b6 100%
+      ); /* Меняем градиент при наведении */
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличиваем тень при наведении */
+    }
+
+    &:active {
+      transform: scale(0.5); /* Добавляем эффект нажатия */
+    }
+  }
+
+}

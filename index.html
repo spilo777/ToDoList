@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/styles.css" />
+    <link rel="stylesheet" href="style/var.css" />
+    <title>ToDoSpilo</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="main__sidebar">
+          <ul class="main__list">
+            <li class="main__items">
+              <a class="main__link active" href="#">Все задачи</a>
+            </li>
+            <li class="main__items">
+              <a class="main__link" href="#">Уже выполнено</a>
+            </li>
+            <li class="main__items">
+              <a class="main__link" href="#">Заметки</a>
+            </li>
+            <li class="main__items">
+              <a class="main__link" href="#">Дневник чувств</a>
+            </li>
+          </ul>
+        </div>
+        <div class="main__content">
+          <h1 class="main__title">ВСЕ ЗАДАЧИ</h1>
+          <input class="main__input-task" type="text" placeholder="Записать задачу" />
+          <button class="main__task-add">+</button>
+
+          <dialog id="taskDialog" class="dialog">
+            <form method="dialog">
+              <label for="title">Заголовок:</label>
+              <input type="text" id="title" name="title" />
+              <p>Начать с:</p>
+              <input type="date" id="startDate" />
+              <p>Закончить до:</p>
+              <input type="date" id="endDate" />
+              <p>Описание задачи</p>
+              <textarea name="" id="textArea"></textarea>
+              <p>выбрать цвет:</p>
+              <input type="color" id="colorTask" />
+              <input type="text" id="group" name="group" />
+              <menu>
+                <button id="cancelBtn" type="reset">Отменить</button>
+                <button id="Push-Task" type="submit">Добавить</button>
+              </menu>
+            </form>
+          </dialog>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

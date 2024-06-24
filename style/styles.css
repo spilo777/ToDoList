@@ -1,0 +1,405 @@
+@charset "UTF-8";
+/* Reset CSS */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Additional Resets */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-moz-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+::placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+  -webkit-font-smoothing: antialiased; /* Improve text rendering in WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Improve text rendering in macOS */
+  text-rendering: optimizeLegibility; /* Optimize text rendering for legibility */
+}
+
+.container {
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 16px;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+  border-radius: 10px;
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-color: white;
+}
+.main__sidebar {
+  padding: 14px 14px 0 14px;
+  font-weight: 400;
+  font-size: 22px;
+  position: relative;
+}
+.main__sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #d8d8d8;
+}
+.main__items {
+  padding-right: 24px;
+  margin-top: 54px;
+  margin-bottom: 25px;
+}
+.main__link {
+  color: #525252;
+  text-decoration: none;
+}
+
+.active {
+  color: #ea5959;
+}
+
+body {
+  min-width: 1000px;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ea5959;
+  padding: 32px;
+}
+
+.main__content {
+  padding: 54px;
+}
+.main__title {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 31px;
+  color: #000;
+}
+.main__input-task {
+  margin-top: 50px;
+  border-radius: 8px;
+  border: 1px solid #f3f3f3;
+  width: 60vh;
+  height: 47px;
+  background-color: #f3f3f3;
+}
+.main__task-add {
+  width: 30px; /* Увеличиваем размер для большей привлекательности */
+  height: 30px;
+  border: none; /* Убираем стандартную границу */
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e9e9f0 0%, #60628d 100%); /* Градиент фона */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
+  color: white;
+  font-size: 24px; /* Увеличиваем размер текста */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Плавный переход для анимаций */
+}
+.main__task-add:hover {
+  background: linear-gradient(135deg, #ea5959 0%, rgba(141, 53, 53, 0.7137254902) 100%); /* Меняем градиент при наведении */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличиваем тень при наведении */
+}
+.main__task-add:active {
+  transform: scale(0.5); /* Добавляем эффект нажатия */
+}
+
+.task {
+  display: flex;
+  margin-top: 32px;
+}
+.task__checkbox {
+  position: relative;
+  margin-right: 4px;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border: 2px solid #ea5959;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; /* Скрываем стандартный чекбокс */
+}
+.task__checkbox:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 6px;
+  border: solid #fff;
+  border-width: 0 0 2px 2px;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+  transition: transform 0.3s;
+}
+.task__checkbox:checked {
+  background-color: #ea5959;
+  border-color: #ea5959;
+}
+.task__checkbox:checked:before {
+  transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+}
+.task__checkbox:hover {
+  border-color: #f08686;
+}
+.task__checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(234, 89, 89, 0.3);
+}
+.task__actual {
+  padding: 4px;
+  display: flex;
+  font-weight: 400;
+  font-size: 18px;
+  color: #5a5a5a;
+}
+.task__label {
+  display: flex;
+  align-items: center;
+}
+.task__delete {
+  display: flex;
+  width: 22px;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.task__delete:active {
+  transform: scale(0.85);
+}
+
+.dialog {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.dialog form {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog label {
+  margin-top: 10px;
+}
+
+.dialog input {
+  margin-bottom: 10px;
+}
+
+.dialog menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}/*# sourceMappingURL=styles.css.map */
